@@ -10,6 +10,7 @@ import java.io.IOException;
 public class DeckApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        Deck deck = Deck.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(DeckApplication.class.getResource("deck-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 530, 240);
         stage.setTitle("Hello!");
