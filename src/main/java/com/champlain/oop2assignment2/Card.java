@@ -22,4 +22,16 @@ public class Card {
     public String toString() {
         return this.aRank + " of " + this.aSuit;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Card card = (Card) obj;
+        return aSuit == card.aSuit && aRank == card.aRank;
+    }
 }
