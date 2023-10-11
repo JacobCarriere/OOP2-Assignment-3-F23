@@ -9,7 +9,7 @@ public class Deck extends CardCollection implements CardSource {
     private static Deck instance = null;
     private final List<Card> aCards = new ArrayList<Card>();
 
-    private Deck() {
+    public Deck() {
         for (Rank currentRank : Rank.values()) {
             for (Suit currentSuit : Suit.values()) {
                 this.aCards.add(new Card(currentRank, currentSuit));
